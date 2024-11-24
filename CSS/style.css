@@ -4,34 +4,75 @@
     box-sizing: border-box;
 }
 
+body {
+    margin: 64px;
+}
+
 .hero-team-section {
     display: flex;
     flex-direction: column;
     text-align: center;
-    row-gap: 16px;
-    width: 70%;
-    margin: 32px auto;
+    row-gap: 24px;
+    width: auto;
+    max-width: 1512px;
+    margin: 0px auto;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .tiles-cards {
     display: flex;
+    flex-direction: row;
     justify-content: space-between; 
     width: 100%;
-    gap: 16px;
+    gap: 24px;
+    margin-top: 12px;
+    /* align-items: flex-start; */
 }
 
 .card {
     display: flex;
-    /* flex: 1 1 30%; */
     flex-basis: 33.3%;
-    /* max-width: 30%; */
+    flex-grow: 1;
+    flex-shrink: 1;
     background-color: black;
     color: white;
-    flex: 1 1 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    /* min-height: 0; */
+    max-height: 85.5px;
 }
 
 .card img {
-    width: 25%;
-    /* flex-basis: 10%; */
-    
+    width: 30%;
+    object-fit: cover   
+}
+
+.card-texts {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    /* justify-content: center; */
+    /* align-items: flex-start; */
+    gap: 6px;
+    padding: 12px 16px;
+    min-width: 0;
+}
+
+.card-texts h3, 
+.card-texts figcaption {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    max-width: 100%; 
+    text-align: left;
+}
+
+.card-texts figcaption {
+    font-size: 12px;
+}
+
+.link-style {
+    color:deepskyblue;
 }
